@@ -1,15 +1,34 @@
 defmodule ExAws.Polly.Mixfile do
   use Mix.Project
 
+  @version "0.2.0"
+  @service "polly"
+  @url "https://github.com/josephan/ex_aws_#{@service}"
+  @name __MODULE__ |> Module.split |> Enum.take(2) |> Enum.join(".")
+
   def project do
     [
       app: :ex_aws_polly,
-      version: "0.1.1",
-      elixir: "~> 1.5",
+      version: @version,
+      elixir: "~> 1.4",
+      package: package(),
+      elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env == :prod,
       deps: deps()
     ]
   end
+
+  defp package do
+    [description: "#{@name} service package",
+     files: ["lib", "config", "mix.exs", "README*"],
+     maintainers: ["Joseph An"],
+     licenses: ["MIT"],
+     links: %{github: @url},
+    ]
+  end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib",]
 
   # Run "mix help compile.app" to learn about applications.
   def application do
