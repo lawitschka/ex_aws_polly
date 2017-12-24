@@ -3,16 +3,21 @@ defmodule ExAws.Polly do
   Documentation for ExAws.Polly.
   """
 
-  @doc """
-  Hello world.
+  def synthesize_speech(text) do
+    request(%{
+      "OutputFormat" => "mp3",
+      "Text" => text,
+      "VoiceId" => "Joanna"
+    })
+  end
 
-  ## Examples
-
-      iex> ExAws.Polly.hello
-      :world
-
-  """
-  def hello do
-    :world
+  defp request(params) do
+    ExAws.Operation.JSON.new(:polly, %{
+      path: "/v1/speech",
+      data: params,
+      headers: [
+        {"content-type", "application/json"},
+      ]
+    })
   end
 end
