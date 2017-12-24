@@ -37,11 +37,13 @@ Get a list of available voices
 ExAws.Polly.describe_voices() |> ExAws.request()
 ```
 
-## Todo
+## Todo before 2.0 release
 
-[] add documentation
-[] add test coverage
-[] support Lexicon actions (ListLexicons, GetLexicon, PutLexicon, DeleteLexicon)
+- [x] support SynthesizeSpeech action
+- [x] support DescribeVoices action
+- [ ] add documentation
+- [ ] add test coverage
+- [ ] support Lexicon actions (ListLexicons, GetLexicon, PutLexicon, DeleteLexicon)
 
 ## License
 
