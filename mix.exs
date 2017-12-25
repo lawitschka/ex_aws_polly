@@ -1,7 +1,7 @@
 defmodule ExAws.Polly.Mixfile do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "0.3.0"
   @service "polly"
   @url "https://github.com/josephan/ex_aws_#{@service}"
   @name __MODULE__ |> Module.split |> Enum.take(2) |> Enum.join(".")
@@ -41,6 +41,7 @@ defmodule ExAws.Polly.Mixfile do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
+      {:poison, ">= 0.0.0", only: [:dev, :test]},
       {:hackney, ">= 0.0.0", only: [:dev, :test]},
       {:sweet_xml, ">= 0.0.0", only: [:dev, :test]},
       {:bypass, "~> 0.7", only: :test},
