@@ -1,4 +1,5 @@
 # ExAws.Polly
+[![Hex.pm](https://img.shields.io/hexpm/v/ex_aws_polly.svg)](https://hex.pm/packages/ex_aws_polly)
 
 AWS Polly service module for https://github.com/ex-aws/ex_aws
 
@@ -11,7 +12,7 @@ along with `:ex_aws` and your preferred JSON codec / http client
 def deps do
   [
     {:ex_aws, "~> 2.0"},
-    {:ex_aws_polly, "~> 0.2.0"},
+    {:ex_aws_polly, "~> 0.3.0"},
     {:poison, "~> 3.0"},
     {:hackney, "~> 1.9"},
   ]
