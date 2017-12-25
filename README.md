@@ -1,5 +1,6 @@
 # ExAws.Polly
 [![Hex.pm](https://img.shields.io/hexpm/v/ex_aws_polly.svg)](https://hex.pm/packages/ex_aws_polly)
+[![Build Docs](https://img.shields.io/badge/hexdocs-release-blue.svg)](https://hexdocs.pm/ex_aws_polly/ExAws.Polly.html)
 
 AWS Polly service module for https://github.com/ex-aws/ex_aws
 

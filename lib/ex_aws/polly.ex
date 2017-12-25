@@ -4,7 +4,8 @@ defmodule ExAws.Polly do
   """
 
   @doc """
-  Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.
+  Returns the list of voices that are available for use when requesting speech synthesis.
+  Each voice speaks a specified language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.
   http://docs.aws.amazon.com/polly/latest/dg/API_DescribeVoices.html
 
   ## Example
@@ -27,6 +28,7 @@ defmodule ExAws.Polly do
   @doc """
   Returns synthesized speech binary from given text.
   http://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html
+
   ## Options
     * `:output_format` - The format in which the returned output will be encoded (mp3, ogg_vorbis, or pcm). Default is mp3.
     * `:voice_id` - Voice ID to use for the synthesis. You can get a list of available voice IDs by calling `ExAws.Polly.describe_voices`. Default is "Joanna".
