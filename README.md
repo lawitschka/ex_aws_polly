@@ -44,7 +44,7 @@ ExAws.Polly.describe_voices() |> ExAws.request()
 
 - [x] support SynthesizeSpeech action
 - [x] support DescribeVoices action
-- [ ] add documentation
+- [x] add documentation
 - [ ] add test coverage
 - [ ] support Lexicon actions (ListLexicons, GetLexicon, PutLexicon, DeleteLexicon)
 
