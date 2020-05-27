@@ -25,6 +25,16 @@ defmodule ExAws.Polly do
     request(:get, :describe_voices, path: "/v1/voices")
   end
 
+  @type synthesize_speech_options :: [
+          output_format: String.t(),
+          voice_id: String.t(),
+          engine: String.t(),
+          language_code: String.t(),
+          lexicon_names: [String.t()],
+          sample_rate: String.t(),
+          text_type: String.t()
+        ]
+
   @doc """
   Returns synthesized speech binary from given text.
   http://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html
@@ -51,6 +61,7 @@ defmodule ExAws.Polly do
           {"Content-Type", "audio/mpeg"}, {"Transfer-Encoding", "chunked"},
           {"Date", "Mon, 25 Dec 2017 01:23:42 GMT"}], status_code: 200}}
   """
+  @spec synthesize_speech(String.t(), synthesize_speech_options) :: ExAws.Operation.RestQuery.t()
   def synthesize_speech(text, opts \\ []) do
     {output_format, opts} = Keyword.pop(opts, :output_format, "mp3")
     {voice_id, opts} = Keyword.pop(opts, :voice_id, "Joanna")
