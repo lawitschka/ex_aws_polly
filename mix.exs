@@ -3,7 +3,7 @@ defmodule ExAws.Polly.Mixfile do
 
   @version "0.4.0"
   @service "polly"
-  @url "https://github.com/josephan/ex_aws_#{@service}"
+  @url "https://github.com/lawitschka/ex_aws_#{@service}"
   @name __MODULE__ |> Module.split() |> Enum.take(2) |> Enum.join(".")
 
   def project do
@@ -22,7 +22,7 @@ defmodule ExAws.Polly.Mixfile do
     [
       description: "#{@name} service package",
       files: ["lib", "config", "mix.exs", "README*"],
-      maintainers: ["Joseph An"],
+      maintainers: ["Moritz Lawitschka"],
       licenses: ["MIT"],
       links: %{github: @url}
     ]
